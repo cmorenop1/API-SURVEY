@@ -1,0 +1,32 @@
+<% include partials/header.ejs%>
+<% include partials/main_nav.ejs%>
+
+
+<main class="bg_home">
+  <div class="container">
+     <div class="row">
+         <!--We use 3 columns-->
+          <div class="col-md-4 mycol_InputMessage">
+              <img src="/assets/images/create_survey.jpg" alt="" class="img-fluid">
+              <p class="text-center">Create a Survey</p>
+              <p class="text-center">Choice your type of survey.</p>
+              <a class="btn" href="/survey/add">Create</a>
+          </div>
+          <div class="col-md-4 mycol_InputMessage">
+              <img src="/assets/images/attend_survey.jpg" alt="" class="img-fluid">
+              <p class="text-center">Attend a Survey</p>
+              <p class="text-center">Choose the survey you want.</p>
+              <a class="btn" href="/survey/list_attend">Take</a>
+          </div>
+
+          <div class="col-md-4 mycol_InputMessage">
+              <img src="/assets/images/show_reports.jpg" alt="" class="img-fluid">
+              <p class="text-center">Show Reports</p>
+              <p class="text-center">Access to surveys' results.</p>
+              <a class="btn" href="/report" >Report</a>
+          </div>
+     </div>         
+  </div> 
+</main>
+
+<% include partials/footer.ejs%>

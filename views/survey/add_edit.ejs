@@ -1,0 +1,93 @@
+<% include ../partials/header.ejs%>
+<% include ../partials/main_nav.ejs%>
+<!-- Content for the Add_Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= item._id %>"
+                    >
+                    <label for="itemTextField">Survey Title</label>
+                    <input type="text" class="form-control"
+                        id="itemTextField"
+                        placeholder="Enter the Survey title"
+                        name="title" 
+                        value="<%= item.title %>"
+                        required>
+                </div>
+                <br />
+
+                <div class="form-group">
+                    
+                    <label for="radioField">Multiple Choice</label>
+                    <input type="radio"
+                    id="radioField"
+                    name="type" 
+                    value="Multiple Choice"
+                     required>
+
+                    <label for="radioField">Agree/Desagree</label>
+                    <input type="radio"
+                    id="radioField"
+                    name="type"
+                    value="Agree/Desagree" 
+                    required> 
+                </div>
+
+
+                <br />
+                <div class="form-group">
+                    <label for="statusTextField">Status</label>
+                    <input type="text" class="form-control"
+                    id="statusTextField"
+                    placeholder="Enter a status"
+                    name="status" 
+                    value="<%= item.status %>"
+                    >
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="startDateTextField">Start Date</label>
+                    <input type="text" class="form-control"
+                    id="startDateTextField"
+                    placeholder="yyyy-mm-dd"
+                    name="startDate" 
+                    value="<%= item.startDate %>"
+                    >
+                </div> 
+                  
+                <br />
+                <div class="form-group">
+                    <label for="endDateTextField">End Date</label>
+                    <input type="text" class="form-control"
+                    id="endDateTextField"
+                    placeholder="yyyy-mm-dd"
+                    name="endDate" 
+                    value="<%= item.endDate %>"
+                    >
+                </div> 
+     
+                <br/>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Add
+                </button>
+                
+                <a href="/" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<% include ../partials/footer.ejs%>

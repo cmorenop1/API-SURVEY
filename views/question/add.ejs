@@ -1,0 +1,87 @@
+<% include ../partials/header.ejs%>
+<% include ../partials/main_nav.ejs%>
+<!-- Content for the Add_Edit page -->
+<div class="container">
+    
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= item._id %>"
+                    >
+
+                    <label for="itemTextField">Question </label>
+                    <input type="text" class="form-control"
+                        id="itemTextField"
+                        placeholder="Enter question"
+                        name="question" 
+                        value="<%= item.question %>"
+                        required>
+                    <label for="itemTextField">option1 </label>
+                    <input type="text" class="form-control"
+                        id="itemTextField"
+                        placeholder="Enter your option"
+                        name="options" 
+                        value="<%= item.question %>"
+                        required>
+
+                    <label for="itemTextField">option2 </label>
+                    <input type="text" class="form-control"
+                        id="itemTextField"
+                        placeholder="Enter your option"
+                        name="options" 
+                        value="<%= item.question %>"
+                        required>
+
+                    <label for="itemTextField">option3 </label>
+                    <input type="text" class="form-control"
+                        id="itemTextField"
+                        placeholder="Enter your option"
+                        name="options" 
+                        value="<%= item.question %>"
+                        required>
+                    <label for="itemTextField">option4 </label>
+                    <input type="text" class="form-control"
+                            id="itemTextField"
+                            placeholder="Enter your option"
+                            name="options" 
+                            value="<%= item.question %>"
+                            required>
+                    <label for="itemTextField">option5 </label>
+                    <input type="text" class="form-control"
+                                id="itemTextField"
+                                placeholder="Enter your option"
+                                name="options" 
+                                value="<%= item.question %>"
+                                required>
+                </div>
+
+                
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-arrow-up"></i> 
+                    Submit
+                </button>
+
+                <a href="/survey/list_edit" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Go back
+                </a>
+
+            </form>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<% include ../partials/footer.ejs%>

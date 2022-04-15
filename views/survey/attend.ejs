@@ -1,0 +1,62 @@
+<% include ../partials/header.ejs%>
+    <% include ../partials/main_nav.ejs%>
+
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-3 col-md-6">
+                    <h1>
+                        <%= title %>
+                    </h1>
+
+
+                    <form class=" bg-white px-4" method="POST">
+
+                        <div class="row">
+                            <% for (var i=0; i < question.length; i++) { %>
+                                <div data-toggle="radio">
+                                    <div class="btn-group-justified">
+
+
+                                        <h3>
+                                            <%= question[i].question %>
+                                        </h3>
+
+                                        <% for(let count=0; count < question[i].options.length; count++) { %>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="<%= question[i].question  %>" id="question[i].question"
+                                                    value="<%= question[i].options[count] %>">
+                                                <label class="form-check-label" for="question[i].question">
+                                                    <%= question[i].options[count] %>
+                                                </label>
+                                            </div>
+                                        <% } %>
+
+                                    </div>
+                                </div>
+
+                            <% } %>
+                        </div>
+
+                        <button class="btn btn-primary" id="submit-btn" type="submit">
+                            <i class="fas fa-edit"></i>
+                            Submit
+                        </button>
+
+                        <a href="/survey/list_attend" id="cancel-btn" class="btn btn-warning">
+                            <i class="fas fa-undo"></i>
+                            Cancel
+                        </a>
+
+                    </form>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <% include ../partials/footer.ejs%>

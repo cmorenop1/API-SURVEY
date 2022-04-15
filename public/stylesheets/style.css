@@ -1,0 +1,48 @@
+/*
+    filename: style.css
+    Student name: Rudy Huayhua
+    Student id: 301229804
+    Date: Feb 05, 2022
+*/ 
+
+body, html  {
+  height: 100%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family:cursive;
+}
+
+.footer i{
+  color: rgb(25, 201, 84);
+}
+
+.btn{
+  background-color: rgba(73, 70, 70, 0.5); 
+  color: white; 
+  border: 2px solid rgb(255, 255, 255);
+
+}
+.btn:hover{
+  background-color: rgb(25, 201, 84);
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+
+/* ---- Home Page ----*/
+.bg_home{
+  background-image: url("/assets/images/pexels-lukas.jpg");
+  height: 80%;
+  background-position: center;
+  background-size: cover;
+}
+.mycol_InputMessage{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 3px solid white;
+  padding: 50px;
+  font-family: sans-serif;
+}
+
+.flash{
+  color: red;
+}

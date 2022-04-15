@@ -1,0 +1,39 @@
+<% include ../partials/header.ejs%>
+<% include ../partials/main_nav.ejs%>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="row">
+        <h1><%= title %></h1>
+        <br>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Title</th>
+                    <th class="text-center">Type</th>
+                    <th class="text-center" colspan="2">Period</th>
+                    <th class="text-center">Attend</th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < SurveyList.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><%= SurveyList[count].title %></td>
+                        <td class="text-center"><%= SurveyList[count].type %></td>
+                        <td class="text-center"><%= SurveyList[count].startDate %></td>
+                        <td class="text-center"><%= SurveyList[count].endDate %></td>
+                        <td class="text-center">
+                            <a href="attend/<%= SurveyList[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-external-link-alt"></i></a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+
+<% include ../partials/footer.ejs%>

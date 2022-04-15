@@ -1,0 +1,51 @@
+<!-- Main Nav bar  -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Here we add our logo -->
+  
+  <a class="navbar-brand" href="/">
+    <img src="/assets/images/logorh.jpeg" alt="logo" style="width:100px;border-radius: 50px;">
+    <h6 style="margin: 5%; text-align: center; font-style: italic;"> A Mean survey</h6>
+  </a>
+
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <!--  Home -->
+    <li class="nav-item">
+      <% if (title=="Home" ) { %>
+        <a class="nav-link active" href="/">
+          <% } else { %>
+            <a class="nav-link" href="/">
+              <% } %>
+                <i class="fas fa-home"></i> Home
+            </a>
+        </a>
+    </li>
+
+
+    <!--  Survey -->
+    <li class="nav-item dropdown">
+      <% if (title=="Survey List" || title=="Create Survey" ) { %>
+        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Survey</a>
+        <% } else { %>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Survey</a>
+          <% } %>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/survey/list_attend">Attend Survey</a></li>
+              <li><a class="dropdown-item" href="/survey/list_edit">Edit Survey</a></li>
+            </ul>
+    </li>
+
+
+    <!--  Sign-in -->
+    <li class="nav-item">
+      <% if (typeof userName=='string' && userName) { %>
+        <a class="nav-link" href="/users/signout" onclick="return confirm('Are you sure?')">Sign Out (<%= userName %>
+            )</a>
+        <% } else { %>
+          <a class="nav-link" href="/users/signin">Signin</a>
+          <% } %>
+    </li>
+
+  </ul>
+</nav>
